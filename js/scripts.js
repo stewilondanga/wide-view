@@ -118,6 +118,15 @@ var app = {
 				// init new YT player
 				var ytPlayer = new YT.Player(playerID, playerParameters);
 
+				// app.players holds ref to all players in page
+				app.ytPlayers.push(ytPlayer);
+
+				// init YT player listeners
+				ytPlayer.addEventListener('onReady', function(event) {
+					// init PlayerManager Object
+					YTManager = new PlayerManager(ytPlayer, videoID);
+				});
+
 
 
 var navigate = (function() {
