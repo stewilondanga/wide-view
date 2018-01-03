@@ -70,6 +70,12 @@ var app = {
 	function onYouTubeIframeAPIReady() {
 		if (typeof app.playersParametersArray === 'undefined')
 			return;
+			// Rules for touch device
+			if(app.onTouch === 'touchstart'){
+				$('.ytplayer').addClass('on-touch');
+				$('.controls').css({'display': 'none'});
+				$('.controls__volume').css({'display': 'none'});
+			}
 
 
 var navigate = (function() {
