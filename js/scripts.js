@@ -65,6 +65,12 @@ var app = {
 		onTouch: (('ontouchstart' in window) || (window.DocumentTouch && document instanceof DocumentTouch)) ? 'touchstart' : 'click',
 	}
 
+	// 2 - Called when iFrameAPI is inject in page
+
+	function onYouTubeIframeAPIReady() {
+		if (typeof app.playersParametersArray === 'undefined')
+			return;
+
 
 var navigate = (function() {
 	$('.dd').toggle();
