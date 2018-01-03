@@ -130,6 +130,24 @@ body {
 			}
 	}
 
+  // RULES FOR VIDEO ON PLAY
+  	&.on-play {
+  		&.ytplayer--complete {}
+  		&.ytplayer--simple {
+  			width: 800px;
+  			height: 600px;
+  			.controls {
+  				bottom: 50%;
+  				left: 50%;
+  				transform: translate3d(-50%, 50%, 0);
+  				.controls__btn {
+  					background-size: 40px;
+  					opacity: 0;
+  				}
+  			}
+  		}
+
+
 
     h1 {
     	font-family: helvetica;
