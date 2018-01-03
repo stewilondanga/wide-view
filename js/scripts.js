@@ -127,6 +127,28 @@ var app = {
 					YTManager = new PlayerManager(ytPlayer, videoID);
 				});
 
+			}
+
+			var __bind = function(fn, me) {
+			    return function() {
+			      return fn.apply(me, arguments);
+			    };
+			  };
+
+			// 4 - PLAYER MANAGER
+
+			function PlayerManager(ytPlayerRef, videoID) {
+
+				this.ytPlayer = ytPlayerRef;
+
+				//check id of player is a video or playlist - video id has 11 letters
+				if(videoID.length == 11){
+					var playerContainer = $('[data-video=' + videoID + ']').parent('.ytplayer');
+				}
+				else{
+					var playerContainer = $('[data-playlist=' + videoID + ']').parent('.ytplayer');
+				}
+
 
 
 var navigate = (function() {
