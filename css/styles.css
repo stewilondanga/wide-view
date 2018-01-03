@@ -158,6 +158,13 @@ body {
       			.controls__btn {
       				&.controls__btn--play {
       					background-image: url('http://iconizer.net/files/DefaultIcon_ver_0.11/orig/media-pause.png');
+              }
+      				&.controls__btn--overlay {
+      					background-image: url('http://wfarm2.dataknet.com/static/resources/icons/set110/74f3fe0c.png');
+      				}
+      			}
+      		}
+      	}
 
 
 
