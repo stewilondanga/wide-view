@@ -147,6 +147,18 @@ body {
   			}
   		}
 
+      .iframe {}
+      		.overlay {
+      			.ovrelay__element--hide {}
+      			.overlay__carousel {
+      				.overlay__element {}
+      			}
+      		}
+      		.controls {
+      			.controls__btn {
+      				&.controls__btn--play {
+      					background-image: url('http://iconizer.net/files/DefaultIcon_ver_0.11/orig/media-pause.png');
+
 
 
     h1 {
