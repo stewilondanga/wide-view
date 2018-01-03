@@ -88,6 +88,14 @@ var app = {
 				$(".ytplayer__iframe").each(function() {
 					playlistIDs.push($(this).attr("data-playlist"));
 				});
+				// obtain element's id - data-video - data-playlist
+				for (var i = 0; i < videoIdList.length; i++) {
+
+					var videoID = videoIdList[i] || playlistIDs[i];
+					var playlistID = playlistIDs[i];
+					var playerID = $('[data-video=' + videoID + ']').attr('id') || $('[data-playlist=' + videoID + ']').attr('id');
+					var playerParameters = app.playersParametersArray[i];
+
 
 
 var navigate = (function() {
