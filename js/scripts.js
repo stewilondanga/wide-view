@@ -96,6 +96,28 @@ var app = {
 					var playerID = $('[data-video=' + videoID + ']').attr('id') || $('[data-playlist=' + videoID + ']').attr('id');
 					var playerParameters = app.playersParametersArray[i];
 
+					// init createPlayer
+					createPlayer(playerParameters, playerID, videoID, playlistID);
+				}
+			}
+
+			// 3 - Take playerParameter and apply to players in page
+
+			function createPlayer(playerParameters, playerID, videoID, playlistID) {
+
+				// set player's id in playerParameters
+				if(playlistID != null){
+					playerParameters.playerVars.playlist = '' + playlistID + '';
+					playerParameters.playerVars.list = '' + playlistID + '';
+
+				}
+				else{
+					playerParameters.videoId = videoID;
+				}
+
+				// init new YT player
+				var ytPlayer = new YT.Player(playerID, playerParameters);
+
 
 
 var navigate = (function() {
