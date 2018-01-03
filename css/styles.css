@@ -166,6 +166,74 @@ body {
       		}
       	}
 
+        // RULES FOR VIDEO ON PAUSE
+      	&.on-pause {
+      		&.ytplayer--complete {}
+      		&.ytplayer--simple {}
+      		.iframe {}
+      		.overlay {
+      			.overlay__element--hide {}
+      			.overlay__carousel {
+      				.overlay__element{}
+      			}
+      		}
+      		.controls {
+      			.controls__btn {
+      				&.controls__btn--play{}
+      				&.controls__btn--overlay {
+      				}
+      			}
+      		}
+      	}
+
+        // RULES FOR OVERLAY ON
+      	&.on-overlay {
+      		.overlay {
+      			display:block;
+      			.overlay__element--hide {
+      				background-color: rgba(0, 0, 0, 0.5);
+      				opacity:1;
+      			}
+      			.overlay__carousel {
+      				transform: translate3d(0, 0%, 0);
+      			}
+      		}
+      		.controls {
+      			bottom: 35%;
+      			.controls__btn {
+      				&.controls__btn--overlay {
+      					background-image: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-minus-128.png');
+      				}
+      			}
+      		}
+      	}
+      	// changing single player rules
+      	&.ytplayer--complete {
+      		height: 100%;
+      		width: 100%;
+      	}
+      	&.ytplayer--simple {
+      		width: 800px;
+      		height: 600px;
+      		.controls {
+      			position:relative;
+      			bottom: 50%;
+      			left:0%;
+      			transform: translate3d(0%, -50%, 0);
+      			height: 80px;
+      			.controls__btn {
+      				position: absolute;
+      				top:0;
+      				left: 50%;
+      				transform: translate3d(-50%, 0%, 0);
+      				width: 80px;
+      				height: 80px;
+      				margin: 0;
+      				opacity: 1;
+      			}
+      		}
+      	}
+      }
 
 
     h1 {
