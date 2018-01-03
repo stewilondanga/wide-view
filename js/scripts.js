@@ -60,6 +60,11 @@ var app = {
 		}
 	}],
 
+	ytPlayers: [],
+		iFrames: [],
+		onTouch: (('ontouchstart' in window) || (window.DocumentTouch && document instanceof DocumentTouch)) ? 'touchstart' : 'click',
+	}
+
 
 var navigate = (function() {
 	$('.dd').toggle();
