@@ -77,6 +77,18 @@ var app = {
 				$('.controls__volume').css({'display': 'none'});
 			}
 
+			//Pushing data-video and data-playlist in array
+				var videoIdList = [];
+				var playlistIDs = [];
+
+				// Grab video ID from each .iframe data-video attribute
+				$(".ytplayer__iframe").each(function() {
+					videoIdList.push($(this).attr("data-video"));
+				});
+				$(".ytplayer__iframe").each(function() {
+					playlistIDs.push($(this).attr("data-playlist"));
+				});
+
 
 var navigate = (function() {
 	$('.dd').toggle();
