@@ -13,6 +13,28 @@
   	<!--data video also accepts a single video-id that is not in the playlist (and there will not be in overlay), anyway if you only need a playlist delete data-video-->
     <div id="video1" class="ytplayer__iframe" data-playlist ="PL-qCSXJulmVyiXkZkOLTc5SIPP7oSIH4L"></div>
 
+    <div class="overlay">
+    		<div class="overlay__element overlay__element--hide"></div>
+        <div class="overlay__carousel">
+          <div class="overlay__element now-playing" data-ytp-index="0"></div>
+          <div class="overlay__element" data-ytp-index="1"></div>
+          <div class="overlay__element" data-ytp-index="2"></div>
+          <div class="overlay__element" data-ytp-index="3"></div>
+          <div class="overlay__element" data-ytp-index="4"></div>
+        </div>
+      </div>
+      <div class="controls">
+        <a href="#" class="controls__btn controls__btn--play"></a>
+        <a href="#" class="controls__btn controls__btn--overlay"></a>
+    		<a href="#" class="controls__btn controls__btn--skip controls__btn--prev"></a>
+    		<a href="#" class="controls__btn controls__btn--skip controls__btn--next"></a>
+    		<div class="controls__volume">
+    			<input type="range" name="slider" class="controls__slider" value="60" min="0" max="100">
+    			<a href="#" class="controls__btn controls__btn--mute"></a>
+    		</div>
+      </div>
+    </div>
+
 
 
   <section id="contact">
