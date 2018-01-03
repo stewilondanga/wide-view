@@ -12,6 +12,63 @@ body {
 	height: 100%;
 }
 
+// PLAYER GLOBAL RULES
+.ytplayer {
+	position: relative;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	.ytplayer__iframe {
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
+	.overlay{
+		//display:none;
+		transition: all 1s ease;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		.overlay__element--hide {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background-color: rgba(0, 0, 0, 0.0);
+			transition: all 1.5s ease;
+			opacity:0;
+			cursor:pointer;
+		}
+		.overlay__carousel {
+			transition: all 1s ease;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 30%;
+			width: 100%;
+			background-color: rgba(255, 255, 255, 0.6);
+			transform: translate3d(0, 100%, 0);
+			backdrop-filter: blur(5px);
+			overflow: hidden;
+			.overlay__element {
+				cursor:pointer;
+				float: left;
+				width: 19.92%;
+				height: 100%;
+				border-right: 1px solid black;
+				transition:all 0.5 ease;
+				&:hover{
+					background-color: rgba(0, 0, 0, 0.2);
+				}
+				&.now-playing {
+					background-color: rgba(0, 0, 0, 0.4);
+				}
+			}
+		}
+	}
 
 
     h1 {
