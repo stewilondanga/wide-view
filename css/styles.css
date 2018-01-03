@@ -70,6 +70,66 @@ body {
 		}
 	}
 
+  .controls {
+		opacity:1;
+		transition: all 1s ease;
+		position: absolute;
+		bottom: 5%;
+		left: 0;
+		z-index: 999;
+		overflow: hidden;
+		width:90%;
+		margin:0 5%;
+		.controls__btn {
+			text-align: center;
+			float: left;
+			display: block;
+			width: 60px;
+			height: 60px;
+			border-radius: 100%;
+			background-color: white;
+			text-decoration: none;
+			text-transform: uppercase;
+			line-height: 60px;
+			margin-right: 20px;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 30px;
+			&.controls__btn--play {
+				background-image: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-play-128.png');
+			}
+			&.controls__btn--overlay {
+				background-image: url('http://wfarm2.dataknet.com/static/resources/icons/set110/74f3fe0c.png');
+			}
+			&.controls__btn--prev{
+				background-image: url('http://findicons.com/files/icons/2315/default_icon/256/media_next.png');
+				transform: rotate(-180deg);
+			}
+			&.controls__btn--next{
+				background-image: 		url('http://findicons.com/files/icons/2315/default_icon/256/media_next.png');
+			}
+		}
+		.controls__volume{
+			 margin: 30px 0;
+				display:block;
+				float: right;
+			.controls__slider{
+				margin: 7px 0;
+			}
+			.controls__btn--mute{
+				width: 30px;
+				height: 30px;
+				margin-right:0px;
+				background-size: 20px;
+				background-image: url('https://hscweb3.hsc.usf.edu/wp-content/uploads/2015/03/COPH-sound-icon-png.png');
+				&.on-mute{
+					//background-size: 30px;
+					background-image: url('http://senhorprudencio.com/assets/_imgs/mute.png');
+				}
+			}
+			}
+	}
+
 
     h1 {
     	font-family: helvetica;
